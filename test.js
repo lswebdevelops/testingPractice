@@ -68,13 +68,11 @@ test("Caesar Decoded: ", () => {
 // Analyzing an Array
 const analyzeArray = require('./analyzeArray');
 const arr = [1,8,3,4,2,6];
-object == {
-  average: 4,
-  min: 1,
-  max: 8,
-  length: 6
-};
 
 test("Analyzing an array: ", () => {
   expect(analyzeArray(arr)).toEqual({average: 4, max: 8, min: 1, length: 6});
-})
+});
+
+test("Analyzing object:", () =>{
+  expect(analyzeArray([1,8,3,4,2,6])).toEqual({average: 4, max: 8, min: 1, length: 6});
+  });

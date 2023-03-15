@@ -13,7 +13,7 @@ function analyzeArray(list){
     let maxArr = Math.max(...list);
     let minArr = Math.min(...list)
     let lengthArr = list.length;
-    return object = {
+    return {
         average: averageArr,
         max: maxArr,
         min: minArr,
@@ -23,5 +23,9 @@ function analyzeArray(list){
 }
 
 console.log(analyzeArray(arr));
+
+const object = analyzeArray([1,8,3,4,2,6]);
+
+console.log(object); // Output: {average: 4, max: 8, min: 1, length: 6}
 
 module.exports = analyzeArray;
