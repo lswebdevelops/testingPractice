@@ -19,7 +19,7 @@ test("Reverse Strings: ", () =>{
 */
 const { multiply, add, subtract, divide } = require('./calculator');
 // testing multiplication
-test("Multiply two numbers", ()=>{
+test("Multiplying two numbers", ()=>{
   expect(multiply(2, 3)).toBe(6)
 });
 
@@ -36,9 +36,31 @@ test("subtracting two numbers", () => {
 });
 
 // testing division 
-// For floating point equality, use toBeCloseTo instead of toEqual,
-// because
-// you don't want a test to depend on a tiny rounding error.
+/*
+For floating point equality, use toBeCloseTo instead of toEqual,
+because you don't want a test to depend on a tiny rounding error.
+*/
 test("dividing two numbers", () => {
-  expect(divide(3,2)).toBeCloseTo(1.5)
+  expect(divide(10,3)).toBeCloseTo(3.33)
+});
+
+
+// Caesar Cipher
+
+const caesarCipher  = require('./caesarCipher');
+// Test case for Caesar Cipher function
+// Input: "Hello, World!" with shift -29
+// Expected output: "Ebiil, Tloia!"
+// This test checks if the function correctly encrypts the input string using the Caesar Cipher algorithm with a shift of -29.
+
+test("Caesar Ciphered: ",()=>{
+  expect(caesarCipher ("Hello, World!", -29)).toBe("Ebiil, Tloia!")
+});
+// Test case for Caesar Decipher function
+// Input: "Ebiil, Tloia!" with shift +29
+// Expected output: "Hello, World!"
+// This test checks if the function correctly decrypts the input string using the Caesar Cipher algorithm with a shift of +29.
+
+test("Caesar Decoded: ", () => {
+  expect(caesarCipher ("Ebiil, Tloia!", +29)).toBe("Hello, World!")
 });
