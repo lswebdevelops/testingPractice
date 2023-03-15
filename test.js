@@ -14,7 +14,6 @@ test("Reverse Strings: ", () =>{
   expect(reverseString('hanunah')).toBe("hanunah");
 });
 
-
 /* testing calculator
 */
 const { multiply, add, subtract, divide } = require('./calculator');
@@ -62,5 +61,20 @@ test("Caesar Ciphered: ",()=>{
 // This test checks if the function correctly decrypts the input string using the Caesar Cipher algorithm with a shift of +29.
 
 test("Caesar Decoded: ", () => {
-  expect(caesarCipher ("Ebiil, Tloia!", +29)).toBe("Hello, World!")
+  expect(caesarCipher("Ebiil, Tloia!", +29)).toBe("Hello, World!")
 });
+
+
+// Analyzing an Array
+const analyzeArray = require('./analyzeArray');
+const arr = [1,8,3,4,2,6];
+object == {
+  average: 4,
+  min: 1,
+  max: 8,
+  length: 6
+};
+
+test("Analyzing an array: ", () => {
+  expect(analyzeArray(arr)).toEqual({average: 4, max: 8, min: 1, length: 6});
+})
