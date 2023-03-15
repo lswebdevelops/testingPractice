@@ -3,8 +3,8 @@
 
 const capitalize = require('./capitalize');
 
-test('Capitalizes words given', () => {
-  expect(capitalize('test')).toBe("TEST");
+test('Capitalizes first letter of words given', () => {
+  expect(capitalize('test')).toBe("Test");
 });
 
 // testing  printing a reverse string
