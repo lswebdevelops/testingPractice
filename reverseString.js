@@ -1,5 +1,3 @@
-const { join } = require("path");
-
 function reverseString (string){
     let splitString = string.split("");
     // console.log(splitString);
